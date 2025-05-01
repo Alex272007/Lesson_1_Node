@@ -11,26 +11,22 @@
 
 const http = require('http');
 const url = require('url');
-
-const viewCounters = {
-    home: 0,
-    about: 0
-};
+const config = require('./config');
 
 const server = http.createServer((req, res) => {  
     if (req.url === '/') {
-        viewCounters.home++;
+        config.viewCounters.home++;
         res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'});
         res.end(`
             <a href="/about"> Главная страница</a> 
-            <p>Просмотров страницы Главная: ${viewCounters.home}</p>
+            <p>Просмотров страницы Главная: ${config.viewCounters.home}</p>
             `);
     } else if(req.url === '/about') {
-        viewCounters.about++;
+        config.viewCounters.about++;
         res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'});
         res.end(`
             <a href="/"> Cтраница о сайте </a>
-            <p>Просмотров страницы О сайте: ${viewCounters.about}</p>
+            <p>Просмотров страницы О сайте: ${config.viewCounters.about}</p>
             `);
     } else {
         res.writeHead(404, {'Content-Type': 'text/html; charset=UTF-8'});
