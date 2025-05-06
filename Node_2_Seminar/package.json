@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "newjs.js",
+  "scripts": {
+    "start": "node newjs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex272007/Lesson_1_Node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex272007/Lesson_1_Node/issues"
+  },
+  "homepage": "https://github.com/Alex272007/Lesson_1_Node#readme",
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "number-precision": "^1.6.0"
+  }
+}
